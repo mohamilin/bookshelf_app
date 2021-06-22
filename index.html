@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="src/css/styles.css" type="text/css">
+</head>
+
+<body style="font-family: Verdana; color: #141212">
+  <div style="background-color: #63dd63b2; padding: 15px; text-align: center">
+    <h1>BOOKSHELF APP</h1>
+  </div>
+  <div style="overflow: auto;">
+    <div class="menu">
+      <a href="/">Home</a>
+      <a href="/about.html">About</a>
+    </div>
+
+    <div class="main">
+      <div class="container">
+        <h2>Masukkan Buku Baru</h2>
+        <form action="#" id="form">
+          <div class="row">
+            <div class="col-25">
+              <label for="fname">Judul Buku</label>
+            </div>
+            <div class="col-75">
+              <input type="text" id="title" name="title" placeholder="Judul Buku" required />
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-25">
+              <label for="lname">Penulis</label>
+            </div>
+            <div class="col-75">
+              <input type="text" id="writer" name="writer" placeholder="Penulis Buku" required />
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-25">
+              <label for="lname">Tahun</label>
+            </div>
+            <div class="col-75">
+              <input style="height: 40px; width: 20%; border-radius: 4px; border: 1px solid #b8b3b3; padding: 5px;"
+                min="1900" max="2099" step="1" type="number" id="year" name="year" placeholder="Tahun" required />
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-25">
+              <label for="country">Status</label>
+            </div>
+            <div class="col-75">
+              <select id="status" name="status">
+                <option value=false>Belum dibaca</option>
+                <option value=true>Selesai dibaca</option>
+              </select>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-25">
+              <label for="subject"></label>
+            </div>
+          </div>
+          <div class="row">
+            <input type="submit" value="Masukkan Buku ke Rak" />
+          </div>
+        </form>
+        <div class="row" style="margin-top: 30px;">
+          <div class="col-25">
+            <label for="fname">Cari Judul Buku</label>
+          </div>
+          <div class="col-60">
+            <input type="text" id="judul-buku" name="judul-buku" onkeyup="filterFunction()"
+              placeholder="Judul Buku.." />
+          </div>
+          <div class="col-15">
+            <!-- <button type="submit">Cari</button> -->
+          </div>
+        </div>
+      </div>
+      <!-- start status book  -->
+      <div class="status-books">
+        <h3>
+          Belum selesai Dibaca
+        </h3>
+        <section class="status-book">
+          <div class="mid-content">
+            <div id="bookList">
+              <!-- content -->
+            </div>
+          </div>
+        </section>
+      </div>
+      <div class="status-books">
+        <h3>
+          Sudah selesai Dibaca
+        </h3>
+        <section class="status-book">
+          <div class="mid-content">
+            <div id="bookList-complete">
+              <!-- content -->
+            </div>
+          </div>
+        </section>
+      </div>
+      <!-- end status book -->
+    </div>
+  </div>
+
+  <div style="
+        background-color: #e5e5e5;
+        text-align: center;
+        padding: 10px;
+        margin-top: 9px;
+      ">
+    Submission Kelas Front End Pemula
+  </div>
+  <script src="src/js/data-storage.js"></script>
+  <script src="src/js/scripts.js"></script>
+  <script src="src/js/app.js"></script>
+  <script src="src/js/filter.js"></script>
+</body>
+
+</html>
